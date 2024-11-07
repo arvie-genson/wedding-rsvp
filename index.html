@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding RSVP</title>
+    <style>
+        /* Global styles for body and background */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f0eb; /* soft pastel background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        /* Container styles for centering and form layout */
+        .container {
+            background-color: #ffffff; /* white box */
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px; /* rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15); /* 3D shadow effect */
+            text-align: center;
+            transform: translateY(-10px); /* slight lift effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+        }
+        /* Hover effect for 3D lift */
+        .container:hover {
+            transform: translateY(-15px); /* more lift on hover */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 8px 8px rgba(0, 0, 0, 0.2); /* deeper shadow on hover */
+        }
+        /* Heading styles */
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        /* Paragraph for introductory text */
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        /* Form and input styling */
+        label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-top: 20px;
+            text-align: left;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        /* Text area for comments */
+        textarea {
+            resize: vertical;
+        }
+        /* Submit button styling */
+        button {
+            margin-top: 30px;
+            width: 100%;
+            padding: 15px;
+            background-color: #d4af37; /* gold color */
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        /* Hover effect for the button */
+        button:hover {
+            background-color: #c49b2e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>You're Invited!</h1>
+        <p>We would love to celebrate with you. Please let us know if you can make it.</p>
+        <form action="https://formspree.io/f/mjkvwedr" method="POST">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+
+			<label for="guests"><h3>We have reserved <b><u>1 seat</u></b> for you.</h3></label>
+			
+            <!--<label for="guests">Number of Guests Attending *</label>-->
+			
+            <label for="message">Dietary Restrictions or Comments</label>
+            <textarea id="message" name="message" rows="4" placeholder="Let us know if you have any dietary restrictions or special requests."></textarea>
+
+            <button type="submit">Submit RSVP</button>
+        </form>
+    </div>
+
+</body>
+</html>
